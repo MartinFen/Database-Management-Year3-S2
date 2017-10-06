@@ -1,0 +1,27 @@
+//Create a User at host '%'
+Create user 'PAT'@'%';
+
+//Create a User at 'localhost'
+Create User 'PAT'@'localhost';
+
+//Drops a User everywhere so you dont have to go through tables and delete each reference
+Drop user 'PAT'@'%';
+
+Create user 'PAT'@'%' identified by 'PAT';
+Select password('PAT');
+
+//Creates a user called pat at % with password PAT which is more secure than using above method
+Create User 'PAT'@'%' identified by PASSWORD '*1C22A01CE98A239A1AE192739520F0DADCB1CA3D';
+
+//Grant all privliges to PAT on all databases and all tables
+Grant ALL on *.* to 'PAT'@'localhost' with grant option;
+
+//Grant all privliges to PAT on db3 database 
+Grant ALL on db3.* to 'PAT'@'localhost' with grant option;
+
+//Grants User PAT access to all tables in current db in use
+use db3;
+Grant ALL on * to 'PAT'@'localhost' with grant option;
+
+//Grant PAT priviliges to the Employee table in db3 only
+Grant ALL on db3.Emp to 'PAT'@'localhost' with grant option;

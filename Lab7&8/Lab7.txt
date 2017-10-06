@@ -1,0 +1,33 @@
+07-03-2017-Lab 7
+
+Drop user 'PAT'@'localhost';
+Create user 'PAT'@'localhost' identified by 'PAT';
+Grant Select (empno,ename), Insert (empno,ename), Update (empno,ename) on db3.emp to 'PAT'@'localhost' with grant option;
+
+log in as user pat 
+
+not finished missed the rest
+
+START TRANSACTION;
+USE db3;
+Select empno,ename,salary from emp;
+update emp set salary = salary *1.2 where deptno = 20;
+select empno,ename, salary from emp;
+
+show engine innodb status;
+
+rollback;
+
+show engine innodb status;
+
+Drop table t; Create Table t ( Field1 integer, Field2 integer, Primary key(field1) ) Engine=InnoDB;
+Insert into t values (2,2);
+Set session transaction isolation level Repeatable Read;
+Show session variables like '%tx%'
+
+Assesment
+Week before easter
+Createing users
+Encription
+Queries
+

@@ -1,0 +1,2 @@
+1. Setting up an AWS https://www.youtube.com/watch?v=xgrgV9Ihp9E
+2. Setting up WAMP on server https://www.youtube.com/watch?v=Wnxe6JqNhvM
